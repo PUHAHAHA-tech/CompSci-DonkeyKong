@@ -236,3 +236,24 @@ def keyPressed():
             #fourth ladder
             if 520 <= xpos <= 526 and 310>=ypos >= 178:
                 ypos += 2
+    if (key == "r"):
+        clear()
+        result = False
+        xpos = 40
+        ypos = 580
+        bx1 = 160
+        by1 = 145
+        bx2 = 200
+        by2 = 145
+def Mario():
+    global walk1, xpos, ypos, walk, face
+    if face == 1:
+        image(walk1,xpos-20, ypos-40)
+    elif face == 0:
+        image(walk11,xpos-20, ypos-40)
+    if (579 >=ypos>= 535 and (518 >= xpos or xpos >= 530) and (718>= xpos or xpos >= 730)) or (443 >= ypos >= 328 and (319 >= xpos or xpos >= 328)) or (307 >= ypos >= 190 and (520 >= xpos or xpos >= 526)) or (177 >= ypos >= 0):
+        ypos += 1
+        if face == 1:
+            xpos += 2
+        elif face == 0:
+            xpos -= 2
